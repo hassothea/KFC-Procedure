@@ -2688,8 +2688,6 @@ y = c(y, (log(abs(rowSums(tab)))+5*sin(x1)-2*x2^2+x3^2)[501:1000])
 y = c(y, (exp(-x2)-cos(x1^2)/cos(x3)+2*exp(x2+x3))[1001:1500])
 
 
-res = c()
-for(i in 1:10){
 train = sample(1500,0.8*1500)
 kfc = KFCreg(train.input = tab[train,], train.responses = y[train], test.input = tab[-train,],
              test.responses = y[-train],
@@ -2715,7 +2713,6 @@ pred = predict.gbm(boost, tab[-train,])
 # MSE
 mse = c(kfc$table$mse.test, mean((rf$test$predicted - y[-train])^2), mean((pred - y[-train])^2))
 
-
 names(mse) = c(rownames(kfc$table), "randomForest", "boost")
-res = rbind(res, mse)
-}
+
+mse
