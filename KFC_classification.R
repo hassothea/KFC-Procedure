@@ -2348,40 +2348,5 @@ dataSimulation = function(m, sigma, prop.test = 0.2, distrib, model, figure = F)
               CLUSTERS = cluster, Running.Time = time.taken))
 }
 
-# ============================ Application ==================================
-
-
-
-  df = dataSimulation(500, 5, 0.3, distrib = "normal2", model = "logit" ,figure = TRUE)
-  dftrain = df$x.train
-  ytrain = as.integer(df$y.train) - 1
-  dftest = df$x.test
-  ytest = as.integer(df$y.test) - 1
-  
-  kfc = KFCclass(train.input = dftrain, 
-                 train.responses = ytrain, 
-                 test.input = dftest,
-                 test.responses = ytest, 
-                 split_data = 0.5,
-                 scale.input = NULL,
-                 K_step = Kstep(K = 3, max.iter = 500, method = c("euclidean", "gkl" , "itakura", "logistic"), figure = TRUE),
-                 F_step = Fstep(single.model = TRUE),
-                 C_step = Cstep(method = "mixed", kernels = c("expo"), min.h = 0.0001, full.naive = FALSE,
-                                max.h = 5, n.h = 100, figure = TRUE, show.info = TRUE, n.cv = 10,
-                                min.alpha = 0.01, min.beta = 0.01, max.alpha = 5, max.beta = 5,
-                                n.alpha = 20, n.beta = 20))
-
-library(randomForest)
-rf = randomForest(x = as.data.frame(dftrain), y = as.factor(ytrain), ntree = 100)
-pred1 = predict(rf, as.data.frame(dftest), type = "class")
-library(adabag)
-dftrain$y = as.factor(ytrain)
-boost <- boosting(y ~., data = as.data.frame(dftrain), mfinal = 100)
-pred2 <- predict(boost, as.data.frame(dftest), type = "class")
-
-dftest$y = as.factor(ytest)
-err = c(comb$test.error, mean(pred1 != Y[-train]), mean(pred2$class != Y[-train]))
-names(err) = c(names(comb$test.error), "randomForest", "boost")
-err
-
+# =========================================================================================
 
