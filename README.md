@@ -1,5 +1,5 @@
 # KFC-Procedure
-KFC procedure is a three-step machine learning procedure used to build a predictive model in both classification and regression problems.
+KFC procedure is a three-step machine learning method aim at constructing predictions in both classification and regression problems.
 It is recently accepted and available in the journal of Statistical Computation and Simulation at the following link: https://dx.doi.org/10.1080/00949655.2021.1891539
 
 # Abstract
