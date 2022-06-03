@@ -7,10 +7,9 @@ It is available in the journal of Statistical Computation and Simulation at the 
 This proceudure consists of three steps:
 - K-step: K-means algorithm with M Bregman divergences. At the end of this step, we have M different partition structures of the input data.
 - F-step: Fitting simple local models on the the K clusters obtained in the previous step for a given option of Bregman divergence. The collection of these K local models is called a candidate model. At the end of this step, we have M candidate models corresponding to M options of the Bregman divergences. For each Bregman divergence, we first assign the point to the closest center using the corresponding Bregman divergence, and the prediction is given by the corresponding local model on that cluster.
-- C-step: Consensual aggregation method which will be used to combine all the predictions obtained from the M candidate models obtained in the previous step. The combining estimation methods (available in the other repository: https://github.com/hassothea/Kernel-based-Aggregation-Method_COBRA_MixCOBRA) are:
-          - Kernel-based consensual regression aggregation method (regression)
-          - Kernel-based consensual classification aggregation method (binary classification)
-          - MixCOBRA (classification and regression).
+- C-step: Consensual aggregation method which will be used to combine all the predictions obtained from the M candidate models obtained in the previous step. The combining estimation methods (available in [AggregationMethods](https://github.com/hassothea/AggregationMethods) repository) are:
+          - `KernelAggReg` : Kernel-based consensual regression aggregation method (see [Has (2021)](https://hal.archives-ouvertes.fr/hal-02884333v5)).
+          - `MixCobraReg` : Aggregation using input-output trade-off (see [Fischer and Mougeot (2019)](https://www.sciencedirect.com/science/article/pii/S0378375818302349)).
 
 The predictions given by individual candidate estimators and the final step of KFC procedure will be provided by the function.
 
@@ -32,5 +31,4 @@ where `file.R` is the file name contained in this repository which you want to i
 
 The documentation and explanation of all the aggregation methods are available on my webpage as listed below:
 
-- `KernelAggReg` : see [KernelAggReg.html](https://hassothea.github.io/files/KernelAggReg/KernelAggReg.html).
-- `MixCobraReg` : see [MixCobraReg.html](https://hassothea.github.io/files/KernelAggReg/MixCobraReg.html).
+- `KFCReg` : see [KFCReg.html](https://hassothea.github.io/files/KernelAggReg/KernelAggReg.html).
