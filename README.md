@@ -1,6 +1,9 @@
 # KFC-Procedure
+
 KFC procedure is a three-step machine learning method aim at constructing predictions in both classification and regression problems.
 It is available in the journal of Statistical Computation and Simulation at the following link: [https://dx.doi.org/10.1080/00949655.2021.1891539](https://dx.doi.org/10.1080/00949655.2021.1891539).
+
+--- 
 
 ## Summary
 
@@ -15,6 +18,8 @@ The predictions given by individual candidate estimators and the final step of K
 
 ![The summary of KFC procedure.](kfc.png)
 
+--- 
+
 ## &#128270; How to download & run the codes?
 
 To run the codes, you can <span style="color: #097BC1">`clone`</span> the repository directly or simply load the <span style="color: #097BC1">`R script`</span> source files from this repository using [devtools](https://cran.r-project.org/web/packages/devtools/index.html) package in `Rstudio` as follows:
@@ -28,6 +33,8 @@ To run the codes, you can <span style="color: #097BC1">`clone`</span> the reposi
     `devtools::source_url("https://raw.githubusercontent.com/hassothea/KFC-Procedure/master/file.R")`
 
 where `file.R` is the file name contained in this repository which you want to import into your `Rstudio`.
+
+---
 
 ## &#128214; Documentation
 
