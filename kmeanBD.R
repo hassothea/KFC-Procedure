@@ -32,7 +32,9 @@ pacman::p_load(keras)
 pacman::p_load(pracma)
 pacman::p_load(latex2exp)
 pacman::p_load(plotly)
-#pacman::p_load(parallel)
+pacman::p_load(parallel)
+pacman::p_load(foreach)
+pacman::p_load(doParallel)
 rm(lookup_packages)
 
 
@@ -248,3 +250,5 @@ kmeansBD <- function(train_input,
     )
   )
 }
+
+# ---------------------------------------------------------------------------------#
