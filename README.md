@@ -13,7 +13,7 @@ This proceudure consists of three steps:
 
 The predictions given by individual candidate estimators and the final step of KFC procedure will be provided by the function.
 
-![The summary of KFC procedure.](“kfc.png”)
+![The summary of KFC procedure.](kfc.png)
 
 ## &#128270; How to download & run the codes?
 
