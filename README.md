@@ -23,7 +23,7 @@ To run the codes, you can <span style="color: #097BC1">`clone`</span> the reposi
 
 2. Loading the source codes from `GitHub` repository using `source_url` function by: 
 
-    `devtools::source_url("https://raw.githubusercontent.com/hassothea/AggregationMethods/main/file.R")`
+    `devtools::source_url("https://raw.githubusercontent.com/hassothea/KFC-Procedure/master/file.R")`
 
 where `file.R` is the file name contained in this repository which you want to import into your `Rstudio`.
 
