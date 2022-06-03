@@ -13,6 +13,8 @@ This proceudure consists of three steps:
 
 The predictions given by individual candidate estimators and the final step of KFC procedure will be provided by the function.
 
+![The summary of KFC procedure.](“kfc.png”)
+
 ## &#128270; How to download & run the codes?
 
 To run the codes, you can <span style="color: #097BC1">`clone`</span> the repository directly or simply load the <span style="color: #097BC1">`R script`</span> source files from this repository using [devtools](https://cran.r-project.org/web/packages/devtools/index.html) package in `Rstudio` as follows:
