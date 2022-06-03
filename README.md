@@ -29,6 +29,6 @@ where `file.R` is the file name contained in this repository which you want to i
 
 ## &#128214; Documentation
 
-The documentation and explanation of all the aggregation methods are available on my webpage as listed below:
+The documentation and explanation of the methods are available on my webpage as listed below:
 
 - `KFCReg` : see [KFCReg.html](https://hassothea.github.io/files/KernelAggReg/KFCReg.html).
