@@ -35,12 +35,13 @@ pacman::p_load(plotly)
 pacman::p_load(parallel)
 pacman::p_load(foreach)
 pacman::p_load(doParallel)
-pacman::p_load(devtools)
 rm(lookup_packages)
 
 
 # ---------------------------------------------------------------------------------#
+
 devtools::source_url("https://raw.githubusercontent.com/hassothea/KFC-Procedure/master/kmeanBD.R")
+
 # ---------------------------------------------------------------------------------#
 
 fitLocalModels <- function(kmeans_BD,
@@ -206,7 +207,8 @@ KFCreg = function(train_input,
                   setGradParamAgg = setGradParameter(),
                   setGridParamAgg = setGridParameter(),
                   setGradParamMix = setGradParameter_Mix(),
-                  setGridParamMix = setGridParameter_Mix()){
+                  setGridParamMix = setGridParameter_Mix(),
+                  silent = FALSE){
   start_time <- Sys.time()
   lookup_div_names <- c("euclidean",
                         "gkl",
@@ -302,7 +304,8 @@ KFCreg = function(train_input,
                                                                 kernels = C_step$kernels,
                                                                 optimizeMethod = C_step$opt_methods,
                                                                 setGradParam = setGradParamMix,
-                                                                setGridParam = setGridParamMix)},
+                                                                setGridParam = setGridParamMix,
+                                                                silent = silent)},
                           cobra = function(pred){kernelAggReg(train_design = pred,
                                                               train_response = y_remain,
                                                               test_design = pred_test,
@@ -317,7 +320,8 @@ KFCreg = function(train_input,
                                                               kernels = C_step$kernels,
                                                               optimizeMethod = C_step$opt_methods,
                                                               setGradParam = setGradParamAgg,
-                                                              setGridParam = setGridParamAgg)})
+                                                              setGridParam = setGridParamAgg,
+                                                              silent = silent)})
   res <- map(.x = C_step$method,
              .f = ~ list_method_agg[[.x]](pred_combine))
   list_agg_methods <- list(cobra = "cob",
@@ -354,8 +358,6 @@ KFCreg = function(train_input,
     ))
   }
 }
-
-
 
 # ---------------------------------------------------------------------------------#
 
