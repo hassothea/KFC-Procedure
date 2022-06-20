@@ -42,6 +42,6 @@ where `file.R` is the file name contained in this repository which you want to i
 
 The documentation and explanation of the methods are available on my webpage as listed below:
 
-- `KFCReg` : see [KFCReg.html](https://hassothea.github.io/files/CodesPhD/KFCReg.html).
+- `KFCReg` : see [KFCReg documentation](https://hassothea.github.io/files/CodesPhD/KFCReg.html).
 
 ----
