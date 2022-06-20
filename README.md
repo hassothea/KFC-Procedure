@@ -11,8 +11,10 @@ This proceudure consists of three steps:
 - K-step: K-means algorithm with M Bregman divergences. At the end of this step, we have M different partition structures of the input data.
 - F-step: Fitting simple local models on the the K clusters obtained in the previous step for a given option of Bregman divergence. The collection of these K local models is called a candidate model. At the end of this step, we have M candidate models corresponding to M options of the Bregman divergences. For each Bregman divergence, we first assign the point to the closest center using the corresponding Bregman divergence, and the prediction is given by the corresponding local model on that cluster.
 - C-step: Consensual aggregation method which will be used to combine all the predictions obtained from the M candidate models obtained in the previous step. The combining estimation methods (available in [AggregationMethods](https://github.com/hassothea/AggregationMethods) repository) are:
-   - [`KernelAggReg`](https://hassothea.github.io/files/CodesPhD/KernelAggReg.html) : Kernel-based consensual regression aggregation method (see [Has (2021)](https://hal.archives-ouvertes.fr/hal-02884333v5)).
+   - [`KernelAggReg`](https://hassothea.github.io/files/CodesPhD/KernelAggReg.html) : A kernel-based consensual regression aggregation method (see [Has (2021)](https://hal.archives-ouvertes.fr/hal-02884333v5)).
    - [`MixCobraReg`](https://hassothea.github.io/files/CodesPhD/MixCobraReg.html) : Aggregation using input-output trade-off (see [Fischer and Mougeot (2019)](https://www.sciencedirect.com/science/article/pii/S0378375818302349)).
+   - [`KernelAggClass`](https://hassothea.github.io/files/CodesPhD/KernelAggClass.html) : A kernel-based combined classification rule (see [Mojirsheibani (2021)](https://www.sciencedirect.com/science/article/pii/S0167715200000249)).
+   - [`MixCobraClass`](https://hassothea.github.io/files/CodesPhD/MixCobraClass.html) : Aggregation using input-output trade-off (see [Fischer and Mougeot (2019)](https://www.sciencedirect.com/science/article/pii/S0378375818302349)).
 
 The predictions given by individual candidate estimators and the final step of KFC procedure will be provided by the function.
 
