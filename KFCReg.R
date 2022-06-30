@@ -52,8 +52,9 @@ fitLocalModels <- function(kmeans_BD,
   X_train <- kmeans_BD$train_data$X_train
   y_train <- train_response[!(kmeans_BD$train_data$id_remain)]
   X_remain <- kmeans_BD$train_data$X_remain
+  nr_remain <- nrow(X_remain)
   y_remain <- NULL
-  if(!is.null(X_remain)){
+  if(nr_remain != 0){
     y_remain <- train_response[kmeans_BD$train_data$id_remain]
   }
   pacman::p_load(tree)
@@ -81,7 +82,7 @@ fitLocalModels <- function(kmeans_BD,
                              data = data_[kmeans_BD$clusters == .x,]))
   }
   pred0 <- NULL
-  if(!is.null(X_remain)){
+  if(nr_remain != 0){
     pred0 <- vector(mode = "numeric", 
                     length = length(y_remain))
     clus <- findClosestCentroid(x. = X_remain,
