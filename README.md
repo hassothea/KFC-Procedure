@@ -13,7 +13,7 @@ This proceudure consists of three steps:
 - C-step (Combining step): All the candidates models constructed in step F are combined using Consensual aggregation methods in this step. The combining estimation methods used in this step are available in my [AggregationMethods](https://github.com/hassothea/AggregationMethods) repository are:
    - [`KernelAggReg`](https://hassothea.github.io/files/CodesPhD/KernelAggReg.html) : A kernel-based consensual regression aggregation method (see [Has (2021)](https://hal.archives-ouvertes.fr/hal-02884333v5)).
    - [`MixCobraReg`](https://hassothea.github.io/files/CodesPhD/MixCobraReg.html) : Aggregation using input-output trade-off (see [Fischer and Mougeot (2019)](https://www.sciencedirect.com/science/article/pii/S0378375818302349)).
-   - [`KernelAggClass`](https://hassothea.github.io/files/CodesPhD/KernelAggClass.html) : A kernel-based combined classification rule (see [Mojirsheibani (2021)](https://www.sciencedirect.com/science/article/pii/S0167715200000249)).
+   - [`KernelAggClass`](https://hassothea.github.io/files/CodesPhD/KernelAggClass.html) : A kernel-based combined classification rule (see [Mojirsheibani (2000)](https://www.sciencedirect.com/science/article/pii/S0167715200000249)).
    - [`MixCobraClass`](https://hassothea.github.io/files/CodesPhD/MixCobraClass.html) : Aggregation using input-output trade-off (see [Fischer and Mougeot (2019)](https://www.sciencedirect.com/science/article/pii/S0378375818302349)).
 
 The procedure provides the predictions of all the candiate models (step F) and the ones of the procedure (step C).
