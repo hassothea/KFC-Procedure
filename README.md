@@ -8,7 +8,7 @@ It is available in the journal of Statistical Computation and Simulation at the 
 ## Summary
 
 This proceudure consists of three steps:
-- $K$-step: $K$-means algorithm with $M$ Bregman divergences $\mathcal{B}=B_1, ... B_M$, [see, for example, [Banerjee (2005)](https://jmlr.org/papers/v6/banerjee05b.html)]. 
+- $K$-step: $K$-means algorithm with $M$ Bregman divergences $\mathcal{B}=B_1, ... B_M$, [see, for example, [Banerjee (2005)](https://jmlr.org/papers/v6/banerjee05b.html)]. According to the properties of Bregman divergences, we expect that the $M$ Bregman divergences will break down the input data into $M$ different partitions structures namely $P_1, ..., P_M$.
 - F-step: Fitting simple local models on the the $K$ clusters obtained in the previous step for a given option of Bregman divergence. The collection of these $K$ local models is called a candidate model (they should be simple such as Linear models for example). At the end of this step, we have $M$ candidate models corresponding to M options of the Bregman divergences. For each Bregman divergence, we first assign the point to the closest center using the corresponding Bregman divergence, and the prediction is given by the corresponding local model on that cluster.
 - C-step: Consensual aggregation method which will be used to combine all the predictions obtained from the M candidate models obtained in the previous step. The combining estimation methods (available in [AggregationMethods](https://github.com/hassothea/AggregationMethods) repository) are:
    - [`KernelAggReg`](https://hassothea.github.io/files/CodesPhD/KernelAggReg.html) : A kernel-based consensual regression aggregation method (see [Has (2021)](https://hal.archives-ouvertes.fr/hal-02884333v5)).
