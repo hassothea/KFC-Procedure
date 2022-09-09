@@ -26,13 +26,9 @@ The procedure provides the predictions of all the candiate models (step F) and t
 
 To run the codes, you can <span style="color: #097BC1">`clone`</span> the repository directly or simply load the <span style="color: #097BC1">`R script`</span> source files from this repository using [devtools](https://cran.r-project.org/web/packages/devtools/index.html) package in `Rstudio` as follows:
 
-1. Install [devtools](https://cran.r-project.org/web/packages/devtools/index.html) package using command: 
+1. Install [devtools](https://cran.r-project.org/web/packages/devtools/index.html) package using command: `install.packages("devtools")`
 
-    `install.packages("devtools")`
-
-2. Loading the source codes from `GitHub` repository using `source_url` function by: 
-
-    `devtools::source_url("https://raw.githubusercontent.com/hassothea/KFC-Procedure/master/file.R")`
+2. Loading the source codes from `GitHub` repository using `source_url` function by: `devtools::source_url("https://raw.githubusercontent.com/hassothea/KFC-Procedure/master/file.R")`
 
 where `file.R` is the file name contained in this repository which you want to import into your `Rstudio`.
 
