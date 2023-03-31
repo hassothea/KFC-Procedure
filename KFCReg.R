@@ -143,7 +143,7 @@ fitLocalModels <- function(kmeans_BD,
                                                label = y_train[kmeans_BD$clusters == .x],
                                                objective = "reg:squarederror",
                                                verbose = 0,
-                                               nrounds = 300))
+                                               nrounds = 500))
     } else{
       mod <- map(.x = 1:K, 
                  .f = ~ model_lookup[[model_]](formula = form, 
