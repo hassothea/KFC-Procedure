@@ -12,7 +12,7 @@ y.train = df.norm2.reg$Training.Data[,3]
 data.test = as.matrix(df.norm2.reg$Testing.Data[,1:2])
 y.test = df.norm2.reg$Testing.Data[,3]
 
-kfc = KFCreg(train.input = data.train, 
+kfc = KFCRegressor(train.input = data.train, 
              train.responses = y.train, 
              test.input = data.test,
              test.responses = y.test,
